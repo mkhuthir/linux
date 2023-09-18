@@ -1,2 +1,10 @@
+
 pio system info
 pio system completion install bash
+
+pio settings get projects_dir
+pio settings set projects_dir ~/Downloads
+
+pio run
+pio run --target upload
+
