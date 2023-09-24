@@ -1,0 +1,5 @@
+
+
+Edit either ~/.profile or ~/.bash_profile and add the following line:
+
+export PATH=$PATH:$HOME/.local/bin
