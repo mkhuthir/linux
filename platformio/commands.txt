@@ -8,3 +8,14 @@ pio settings set projects_dir ~/Downloads
 pio run
 pio run --target upload
 
+
+
+To make pio reachable from CLI
+
+Edit either ~/.profile or ~/.bash_profile and add the following line:
+export PATH=$PATH:$HOME/.local/bin
+
+Then:
+ln -s ~/.platformio/penv/bin/platformio ~/.local/bin/platformio
+ln -s ~/.platformio/penv/bin/pio ~/.local/bin/pio
+ln -s ~/.platformio/penv/bin/piodebuggdb ~/.local/bin/piodebuggdb
