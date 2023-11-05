@@ -1,0 +1,4 @@
+
+# Renesas based Arduino Santiago/Portenta H33 bootloader mode UDEV rules
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", MODE:="0666"
