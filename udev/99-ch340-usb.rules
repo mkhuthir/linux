@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", ATTRS{product}=="USB2.0-Serial", RUN+="/usr/local/bin/cheapduino.py %k", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ENV{ID_MM_DEVICE_IGNORE}="1"
+
