@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=0.9.4
+Name=nRF Connect
+Comment=Launches nRF Connect
+Icon=/home/mkhuthir/apps/icons/arduino-ide.png
+Exec=/home/mkhuthir/apps/arduino-ide_2.2.1_Linux_64bit.AppImage
+Terminal=false
+Path=/home/mkhuthir/apps

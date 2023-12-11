@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=0.9.4
+Name=nRF Connect
+Comment=Launches nRF Connect
+Icon=/home/mkhuthir/apps/icons/nrfconnect.png
+Exec=/home/mkhuthir/apps/nrfconnect-4.3.0-x86_64.AppImage
+Terminal=false
+Path=/home/mkhuthir/apps
