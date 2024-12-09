@@ -27,4 +27,12 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_snapd-desktop-integration
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_snapd-desktop-integration_snapd-desktop-integration"
 TAG=="snap_snapd-desktop-integration_snapd-desktop-integration", SUBSYSTEM!="module", SUBSYSTEM!="subsystem", RUN+="/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snapd-desktop-integration_snapd-desktop-integration $devpath $major:$minor"

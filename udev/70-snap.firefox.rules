@@ -37,6 +37,14 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_firefox_firefox"
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_firefox_firefox"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_firefox_firefox"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_firefox_firefox"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_firefox_firefox"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_firefox_firefox"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_firefox_firefox"
 # u2f-devices
 # Bluink Key
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="2abe", ATTRS{idProduct}=="1002", TAG+="snap_firefox_firefox"
@@ -83,6 +91,9 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="20a0", ATTRS{idProduct
 # Nitrokey FIDO2
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="42b1", TAG+="snap_firefox_firefox"
 # u2f-devices
+# OneSpan DIGIPASS FX Series
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1a44", ATTRS{idProduct}=="1501|1502|1503|1506|1507", TAG+="snap_firefox_firefox"
+# u2f-devices
 # OnlyKey
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="60fc", TAG+="snap_firefox_firefox"
 # u2f-devices
@@ -101,8 +112,8 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1ea8", ATTRS{idProduct
 # Thetis U2F BT Fido2 Key
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1ea8", ATTRS{idProduct}=="fc25", TAG+="snap_firefox_firefox"
 # u2f-devices
-# Token2 FIDO2 key
-SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="349e", ATTRS{idProduct}=="0010|0011|0012|0020|0021|0022|0200|0201|0202", TAG+="snap_firefox_firefox"
+# Token2 FIDO2 Security Keys
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="349e", ATTRS{idProduct}=="0010|0011|0012|0013|0014|0015|0016|0020|0021|0022|0023|0024|0025|0026|0200|0201|0202|0203|0204|0205|0206", TAG+="snap_firefox_firefox"
 # u2f-devices
 # Tomu board + chopstx U2F + SoloKeys + Flipper zero
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="cdab|a2ca|5741", TAG+="snap_firefox_firefox"
@@ -113,8 +124,8 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="534c", ATTRS{idProduct
 # Trezor v2
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="53c0|53c1", TAG+="snap_firefox_firefox"
 # u2f-devices
-# TrustKey TrustKey G310H
-SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="4a2a", TAG+="snap_firefox_firefox"
+# TrustKeys FIDO2 U2F
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="4a2a|a6e9", TAG+="snap_firefox_firefox"
 # u2f-devices
 # U2F Zero
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="8acf", TAG+="snap_firefox_firefox"
@@ -166,6 +177,14 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_firefox_geckodriver"
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_firefox_geckodriver"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_firefox_geckodriver"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_firefox_geckodriver"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_firefox_geckodriver"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_firefox_geckodriver"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_firefox_geckodriver"
 # u2f-devices
 # Bluink Key
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="2abe", ATTRS{idProduct}=="1002", TAG+="snap_firefox_geckodriver"
@@ -212,6 +231,9 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="20a0", ATTRS{idProduct
 # Nitrokey FIDO2
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="42b1", TAG+="snap_firefox_geckodriver"
 # u2f-devices
+# OneSpan DIGIPASS FX Series
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1a44", ATTRS{idProduct}=="1501|1502|1503|1506|1507", TAG+="snap_firefox_geckodriver"
+# u2f-devices
 # OnlyKey
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1d50", ATTRS{idProduct}=="60fc", TAG+="snap_firefox_geckodriver"
 # u2f-devices
@@ -230,8 +252,8 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1ea8", ATTRS{idProduct
 # Thetis U2F BT Fido2 Key
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1ea8", ATTRS{idProduct}=="fc25", TAG+="snap_firefox_geckodriver"
 # u2f-devices
-# Token2 FIDO2 key
-SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="349e", ATTRS{idProduct}=="0010|0011|0012|0020|0021|0022|0200|0201|0202", TAG+="snap_firefox_geckodriver"
+# Token2 FIDO2 Security Keys
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="349e", ATTRS{idProduct}=="0010|0011|0012|0013|0014|0015|0016|0020|0021|0022|0023|0024|0025|0026|0200|0201|0202|0203|0204|0205|0206", TAG+="snap_firefox_geckodriver"
 # u2f-devices
 # Tomu board + chopstx U2F + SoloKeys + Flipper zero
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="cdab|a2ca|5741", TAG+="snap_firefox_geckodriver"
@@ -242,8 +264,8 @@ SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="534c", ATTRS{idProduct
 # Trezor v2
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="53c0|53c1", TAG+="snap_firefox_geckodriver"
 # u2f-devices
-# TrustKey TrustKey G310H
-SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="4a2a", TAG+="snap_firefox_geckodriver"
+# TrustKeys FIDO2 U2F
+SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="311f", ATTRS{idProduct}=="4a2a|a6e9", TAG+="snap_firefox_geckodriver"
 # u2f-devices
 # U2F Zero
 SUBSYSTEM=="hidraw", KERNEL=="hidraw*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="8acf", TAG+="snap_firefox_geckodriver"

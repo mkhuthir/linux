@@ -27,6 +27,14 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_snap-store_snap-store"
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_snap-store_snap-store"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_snap-store_snap-store"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_snap-store_snap-store"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_snap-store_snap-store"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_snap-store_snap-store"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_snap-store_snap-store"
 TAG=="snap_snap-store_snap-store", SUBSYSTEM!="module", SUBSYSTEM!="subsystem", RUN+="/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snap-store_snap-store $devpath $major:$minor"
 # opengl
 KERNEL=="dma_buf_te", TAG+="snap_snap-store_ubuntu-software"
@@ -56,6 +64,14 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_snap-store_ubuntu-softwar
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_snap-store_ubuntu-software"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_snap-store_ubuntu-software"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_snap-store_ubuntu-software"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_snap-store_ubuntu-software"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_snap-store_ubuntu-software"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_snap-store_ubuntu-software"
 TAG=="snap_snap-store_ubuntu-software", SUBSYSTEM!="module", SUBSYSTEM!="subsystem", RUN+="/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snap-store_ubuntu-software $devpath $major:$minor"
 # opengl
 KERNEL=="dma_buf_te", TAG+="snap_snap-store_ubuntu-software-local-file"
@@ -85,4 +101,12 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_snap-store_ubuntu-softwar
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_snap-store_ubuntu-software-local-file"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_snap-store_ubuntu-software-local-file"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_snap-store_ubuntu-software-local-file"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_snap-store_ubuntu-software-local-file"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_snap-store_ubuntu-software-local-file"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_snap-store_ubuntu-software-local-file"
 TAG=="snap_snap-store_ubuntu-software-local-file", SUBSYSTEM!="module", SUBSYSTEM!="subsystem", RUN+="/usr/lib/snapd/snap-device-helper $env{ACTION} snap_snap-store_ubuntu-software-local-file $devpath $major:$minor"

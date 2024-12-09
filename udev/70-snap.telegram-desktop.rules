@@ -31,4 +31,12 @@ SUBSYSTEM=="dma_heap", KERNEL=="linux,cma", TAG+="snap_telegram-desktop_telegram
 SUBSYSTEM=="dma_heap", KERNEL=="system", TAG+="snap_telegram-desktop_telegram-desktop"
 # opengl
 SUBSYSTEM=="drm", KERNEL=="card[0-9]*", TAG+="snap_telegram-desktop_telegram-desktop"
+# opengl
+SUBSYSTEM=="host1x-fence", TAG+="snap_telegram-desktop_telegram-desktop"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="ctrl", TAG+="snap_telegram-desktop_telegram-desktop"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2" KERNEL=="prof", TAG+="snap_telegram-desktop_telegram-desktop"
+# opengl
+SUBSYSTEM=="nvidia-gpu-v2-power" KERNEL=="power", TAG+="snap_telegram-desktop_telegram-desktop"
 TAG=="snap_telegram-desktop_telegram-desktop", SUBSYSTEM!="module", SUBSYSTEM!="subsystem", RUN+="/usr/lib/snapd/snap-device-helper $env{ACTION} snap_telegram-desktop_telegram-desktop $devpath $major:$minor"
